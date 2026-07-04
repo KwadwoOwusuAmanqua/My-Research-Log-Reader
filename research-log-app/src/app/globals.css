@@ -1,0 +1,56 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar { width: 11px; height: 11px; }
+::-webkit-scrollbar-thumb { background: #DCDCE2; border-radius: 8px; border: 3px solid #FAFAFA; }
+::-webkit-scrollbar-thumb:hover { background: #C6C6CE; }
+::-webkit-scrollbar-track { background: transparent; }
+
+textarea { font-family: var(--font-dm-sans, 'DM Sans', sans-serif); }
+
+@keyframes rlfade {
+  from { opacity: 0; transform: translateY(7px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes rlshake {
+  0%, 100% { transform: translateX(0); }
+  20%       { transform: translateX(-6px); }
+  40%       { transform: translateX(6px); }
+  60%       { transform: translateX(-4px); }
+  80%       { transform: translateX(4px); }
+}
+
+.rl-shake { animation: rlshake 0.45s ease; }
+
+@media print {
+  [data-print-hide] { display: none !important; }
+}
+
+/* ── Interactive hover states ───────────────────────────── */
+.rl-btn { cursor: pointer; transition: background-color 0.12s ease, color 0.12s ease, border-color 0.12s ease; }
+
+.rl-btn-sidebar:hover   { background: #F5F5F7 !important; color: #374151 !important; }
+.rl-btn-project:hover   { background: #F1F1F4 !important; }
+.rl-btn-pitem:hover     { background: #F5F5F7 !important; }
+.rl-btn-new-proj:hover  { background: #F0F0FB !important; }
+.rl-btn-timeline:hover  { background: #F5F5F7 !important; }
+.rl-btn-toolbar:hover   { background: #ffffff !important; color: #111827 !important; }
+.rl-btn-ref:hover       { background: #E2E5F8 !important; }
+.rl-btn-edit:hover      { background: #F5F5F7 !important; color: #4F46E5 !important; }
+.rl-btn-delete:hover    { background: #FCEBEB !important; color: #DC4C4C !important; }
+.rl-btn-export:hover    { background: #F5F5F7 !important; border-color: #DDD !important; }
+.rl-btn-primary:hover   { background: #4338CA !important; }
+.rl-btn-cancel:hover    { background: #F5F5F7 !important; }
+.rl-btn-clear:hover     { color: #4338CA !important; }
+.rl-btn-rm:hover        { color: #374151 !important; }
+.rl-btn-tag:hover       { opacity: 0.85; }
+.rl-btn-rename:hover    { background: #F0F0FB !important; color: #4F46E5 !important; }
+.rl-input:focus         { border-color: #4F46E5 !important; background: #fff !important; box-shadow: 0 0 0 4px rgba(79,70,229,0.11) !important; }
+.rl-textarea:focus      { border-color: #4F46E5 !important; box-shadow: 0 0 0 4px rgba(79,70,229,0.11) !important; }
